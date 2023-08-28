@@ -5,7 +5,12 @@ import {headers} from "next/headers";
 //get request
 
 export async function GET(req,res){
-   
+   return NextResponse.json(
+        {},
+        {
+            status:401
+        }
+   );
 }
 
 
