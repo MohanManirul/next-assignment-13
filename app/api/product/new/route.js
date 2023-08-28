@@ -1,23 +1,12 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 import {headers} from "next/headers";
+import {redirect} from "next/navigation";
 
 //get request
 
 export async function GET(req,res){
-    return NextResponse.json(
-        {},
-        {
-            status:400,
-            headers : {
-                'token' : 'XYZ-123',
-                'token2' : 'XYZ-123',
-                'Set-Cookie' : 'theme = dark;language = en'
-            }
-                
-            
-        }
-   );
+    redirect('/');
 }
 
 
