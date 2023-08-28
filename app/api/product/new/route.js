@@ -5,10 +5,17 @@ import {headers} from "next/headers";
 //get request
 
 export async function GET(req,res){
-   return NextResponse.json(
+    return NextResponse.json(
         {},
         {
-            status:401
+            status:400,
+            headers : {
+                'token' : 'XYZ-123',
+                'token2' : 'XYZ-123',
+                'Set-Cookie' : 'theme = dark;language = en'
+            }
+                
+            
         }
    );
 }
@@ -20,7 +27,14 @@ export async function POST(req,res){
     return NextResponse.json(
         {},
         {
-            status:401
+            status:400,
+            headers : {
+                'token' : 'XYZ-123',
+                'token2' : 'XYZ-123',
+                'Set-Cookie' : 'theme = dark;language = en'
+            }
+                
+            
         }
    );
 }
