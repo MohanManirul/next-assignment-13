@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import { getPosts } from './lib/getAllPost';
+import { setCookie } from './lib/setCookie';
 
 
 export default function Home() {
+    const handleSetCookie = () => {
+        setCookie()
+    }
     const [posts , setPosts] = useState([]);
     useEffect(()=>{
 
@@ -19,7 +23,7 @@ export default function Home() {
   return (
     <>
             <div className="row">
-                <p>test section one</p>
+            <button className="btn btn-success" onClick={handleSetCookie}>SetCookie</button>
             </div>
             <div className="row">
                 <p>test section two</p>
