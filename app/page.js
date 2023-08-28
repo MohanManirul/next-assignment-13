@@ -6,9 +6,14 @@ import { setCookie } from './lib/setCookie';
 
 
 export default function Home() {
+    
     const handleSetCookie = () => {
         setCookie()
     }
+
+
+
+
     const [posts , setPosts] = useState([]);
     useEffect(()=>{
 

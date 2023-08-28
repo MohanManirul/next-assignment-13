@@ -20,7 +20,7 @@ export async function POST(req,res){
             headers : {
                 'token' : 'XYZ-123',
                 'token2' : 'XYZ-123',
-                'Set-Cookie' : 'theme = dark;language = en'
+                'Set-Cookie' : 'theme = dark',
             }
                 
             
