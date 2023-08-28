@@ -17,10 +17,12 @@ export async function GET(req,res){
 //post request
 
 export async function POST(req,res){
-    let token = req.cookies.get('token');
-    return NextResponse.json({
-        token: token
-    })
+    return NextResponse.json(
+        {},
+        {
+            status:401
+        }
+   );
 }
 
 
