@@ -1,13 +1,10 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 import {headers} from "next/headers";
-import {redirect} from "next/navigation";
+
 
 //get request
 
-export async function GET(req,res){
-    redirect('/');
-}
 
 
 //post request
@@ -27,6 +24,7 @@ export async function POST(req,res){
         }
    );
 }
+
 
 
 //put request
