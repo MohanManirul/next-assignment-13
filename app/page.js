@@ -3,13 +3,23 @@
 import { useEffect, useState } from 'react';
 import { getPosts } from './lib/getAllPost';
 import { setCookie } from './lib/setCookie';
+import { getCookie } from './lib/getCookie';
 
 
 export default function Home() {
-    
+    const [cookie , myCookie] = useState('');
+    console.log(cookie);
     const handleSetCookie = () => {
         setCookie()
     }
+    const handleGetCookie = () => {
+        let data = getCookie().then((res)=>{
+            myCookie(res)
+        })
+    }
+
+    
+    
 
 
 
@@ -28,10 +38,11 @@ export default function Home() {
   return (
     <>
             <div className="row">
-            <button className="btn btn-success" onClick={handleSetCookie}>SetCookie</button>
+            <button className="btn btn-success" onClick={handleSetCookie}>SetCookie</button> <hr/>
+            <button className="btn btn-success" onClick={handleGetCookie}>getCookie</button>
             </div>
             <div className="row">
-                <p>test section two</p>
+                <p>test {cookie.cookiesData.theme}</p>
             </div>
         <div className="row">
             <b className="text-center">Blog List</b>
