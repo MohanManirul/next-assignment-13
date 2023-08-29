@@ -13,15 +13,10 @@ export default function Home() {
         setCookie()
     }
     const handleGetCookie = () => {
-        let data = getCookie().then((res)=>{
+        let datagetCookie = getCookie().then((res)=>{
             myCookie(res)
         })
     }
-
-    
-    
-
-
 
 
     const [posts , setPosts] = useState([]);
@@ -42,7 +37,7 @@ export default function Home() {
             <button className="btn btn-success" onClick={handleGetCookie}>getCookie</button>
             </div>
             <div className="row">
-               
+               <p>{cookiesData.cookiesData[value]}</p>
             </div>
         <div className="row">
             <b className="text-center">Blog List</b>
