@@ -10,8 +10,3 @@ export function middleware(req , res){
     }
 }
 
-export const config={
-
-    matcher:['/api/:path*']
-
-}
