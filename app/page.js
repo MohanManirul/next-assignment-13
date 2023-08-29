@@ -37,7 +37,7 @@ export default function Home() {
             <button className="btn btn-success" onClick={handleGetCookie}>getCookie</button>
             </div>
             <div className="row">
-               <p>{cookiesData.cookiesData[value]}</p>
+               <p>cookie</p>
             </div>
         <div className="row">
             <b className="text-center">Blog List</b>
