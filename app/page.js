@@ -42,7 +42,7 @@ export default function Home() {
             <button className="btn btn-success" onClick={handleGetCookie}>getCookie</button>
             </div>
             <div className="row">
-                <p>test {cookie.cookiesData.theme}</p>
+               
             </div>
         <div className="row">
             <b className="text-center">Blog List</b>
